@@ -1,25 +1,27 @@
-# AUTOLOOM
+# AUTOFOOM
 by vie mccoy, jessica taylor, and evan mcmullen for morpheus systems
 
-autoloom is a program that allows you automatically navigate the latent space of base models.
+autofoom is a program that allows you automatically navigate the latent space of base models.
 
 instructions to use the lui:
 
-make sure you have poetry installed and a .env file with your openai and hyperbolic api keys (in the autoloom directory)
+make sure you have uv installed and a .env file with your openai and hyperbolic api keys (in the autofoom directory)
 
 ```bash
-git clone https://github.com/viemccoy/autoloom.git
+git clone https://github.com/TeglonLabs/autofoom.git
 
-cd autoloom
+cd autofoom
 
-poetry install
+uv venv
+source .venv/bin/activate
+uv pip install -e .
 
-poetry run lui
+lui
 ```
 
 environment setup:
 
-create a `.env` file in ./autoloom with the following variables:
+create a `.env` file in ./autofoom with the following variables:
 
 ```env
 HYPERBOLIC_API_KEY=your_hyperbolic_key_here

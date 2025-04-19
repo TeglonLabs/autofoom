@@ -43,7 +43,7 @@ ASCII_ART = """   _____    __    __    _______    _____    __       _____      _
  \/_/ \_\/   \/__\/     /_/_/     )_____(  \/_____/ )_____(    )_____(   \_\/  \/_/  
                                                                                      """
 
-class AUTOLOOM(App):
+class AUTOFOOM(App):
     CSS_PATH = "styles.css"
     BINDINGS = [
         ("ctrl+c", "quit", "Quit"),
