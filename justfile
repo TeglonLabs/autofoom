@@ -4,6 +4,20 @@
 default:
     @just --list
 
+# One-command guaranteed setup and run with optimal configuration
+run:
+    @echo "🌀 Setting up autofoom with optimal configuration..."
+    @cd autofoom && \
+    rm -rf .venv || true && \
+    uv venv --python=3.11 && \
+    . .venv/bin/activate && \
+    uv pip install -e . && \
+    @echo "🚀 Launching autofoom UI with enhanced settings..." && \
+    export OPENAI_API_KEY=${OPENAI_API_KEY:-"sk-demo-key"} && \
+    export HYPERBOLIC_API_KEY=${HYPERBOLIC_API_KEY:-"hb-demo-key"} && \
+    python -c "import os; print(f'\033[1;36m✨ Using model: {os.getenv(\"DEFAULT_CLASSIFIER\", \"gpt-4\")} | Temperature: 0.8 | Max Tokens: 150\033[0m')" && \
+    lui
+
 # Setup a uv environment and install the package
 setup:
     cd autofoom && \
