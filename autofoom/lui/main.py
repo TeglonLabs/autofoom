@@ -1,7 +1,7 @@
-from lui.ui.app import AUTOLOOM
+from lui.ui.app import AUTOFOOM
 
 def main():
-    app = AUTOLOOM()
+    app = AUTOFOOM()
     app.run()
 
 if __name__ == "__main__":
